@@ -53,7 +53,7 @@ def main():
     parser.add_argument("--port", default=5000, help="port to run server on")
 
     args = parser.parse_args()
-    server = pywsgi.WSGIServer((args.host, args.port), flask_app, handler_class=WebSocketHandler)
+    server = pywsgi.WSGIServer((args.host, int(args.port)), flask_app, handler_class=WebSocketHandler)
     logging.info("Terminal Started on http://%s:%s",args.host,args.port)
     server.serve_forever()
 
