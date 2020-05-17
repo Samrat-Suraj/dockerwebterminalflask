@@ -1,0 +1,87 @@
+#!/bin/bash
+sudo apt-get update
+
+sudo apt-get install nginx unzip
+
+wget https://github.com/vasukushwah/flask-vue-term/archive/master.zip
+
+sudo unzip master.zip -d /usr/local/bin
+
+project=/usr/local/bin/flask-vue-term-master
+
+sudo chmod -R 777 $project/
+
+python3 -m pip install -U pip
+
+python3 -m pip install -r $project/requirements.txt
+
+sudo touch /etc/systemd/system/flaskvueterm.service 
+x=tem.tem
+
+touch $x
+echo "[Unit]
+Description=Terminal daemon
+After=network.target
+
+[Service]
+User=$USER
+Group=www-data
+WorkingDirectory=$project
+ExecStart=$HOME/.local/bin/gunicorn --access-logfile - --workers 3 --bind unix:$project/flaskvueterm.sock -k flask_sockets.worker main:flask_app
+
+[Install]
+WantedBy=multi-user.target" >> $x
+
+sudo mv  $x /etc/systemd/system/flaskvueterm.service
+
+sudo systemctl start flaskvueterm.service
+
+
+confFile=/etc/nginx/sites-available/flaskvueterm
+sudo touch $confFile
+
+echo Enter your domain name or ip:
+
+read serverDomain
+
+touch $x 
+
+echo "map \$http_upgrade \$connection_upgrade {
+        default upgrade;
+        '' close;
+}
+
+server {
+    listen 80;
+    server_name $serverDomain;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location /dist/static/ {
+        root $project;
+    }
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:$project/flaskvueterm.sock;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade \$http_upgrade;
+        proxy_set_header Connection \$connection_upgrade;
+        proxy_set_header Host \$host;
+    }
+}" >> $x
+
+sudo mv $x $confFile
+
+sudo ln -s $confFile /etc/nginx/sites-enabled
+
+sudo systemctl restart nginx
+
+sudo ufw allow 'Nginx Full'
+
+
+
+
+
+
+
+

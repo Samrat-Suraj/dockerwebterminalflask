@@ -5,3 +5,4 @@ pyte==0.8.0
 setproctitle==1.1.10
 Flask==1.1.1
 gevent_websocket==0.10.1
+gunicorn
