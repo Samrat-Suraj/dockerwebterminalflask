@@ -1,7 +1,7 @@
 # flask-vue-term
 **flask-vue-term** is a web base terminal . Using python **Flask-Sockets and Vuejs**.
 
-
+![image](https://github.com/vasukushwah/flask-vue-term/blob/master/dist/static/images/image.gif?raw=true)
 ###### For auto setup run following commands
 **Note:** if your system running another web server stop it first because flask-vue-term recommended Nginx web server.
 
