@@ -1,4 +1,5 @@
 Flask_Sockets==0.2.1
+markupsafe==2.0.1
 Werkzeug==1.0.1
 gevent==24.2.1
 pyte==0.8.0
