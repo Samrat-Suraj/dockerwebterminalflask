@@ -50,7 +50,7 @@ def main():
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
     parser.add_argument("--host", default="0.0.0.0", help="host address to run server on ")
-    parser.add_argument("--port", default=5000, help="port to run server on")
+    parser.add_argument("--port", default=8000, help="port to run server on")
 
     args = parser.parse_args()
     server = pywsgi.WSGIServer((args.host, int(args.port)), flask_app, handler_class=WebSocketHandler)
