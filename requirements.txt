@@ -1,8 +1,8 @@
 Flask_Sockets==0.2.1
-Werkzeug==2.2.3
-gevent==1.5.0
+Werkzeug==1.0.1
+gevent==24.2.1
 pyte==0.8.0
 setproctitle==1.1.10
-Flask==1.1.1
+Flask==1.1.4
 gevent_websocket==0.10.1
 gunicorn
