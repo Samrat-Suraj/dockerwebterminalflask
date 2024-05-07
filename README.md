@@ -1,13 +1,13 @@
-# flask-vue-term
-**flask-vue-term** is a web base terminal . Using python **Flask-Sockets and Vuejs**.
+# DockerWebTerminal
+**DokerWebTerminal** is a web base terminal . Using python **Flask-Sockets and Vuejs**.
 
 ![image](https://github.com/vasukushwah/flask-vue-term/blob/master/dist/static/images/image.gif?raw=true)
 ###### For auto setup run following commands
 **Note:** if your system running another web server stop it first because flask-vue-term recommended Nginx web server.
 
-``` git clone https://github.com/vasukushwah/flask-vue-term.git ```
+``` git clone https://github.com/shreerambhakthhu/dockerwebterminalflask.git ```
 
-``` cd flask-vue-term/script ```
+``` cd dockerwebterminalflask/script ```
 
 ``` bash installscript ```
 
