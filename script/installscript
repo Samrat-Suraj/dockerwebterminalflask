@@ -3,11 +3,11 @@ sudo apt-get update
 
 sudo apt-get install nginx unzip
 
-wget https://github.com/vasukushwah/flask-vue-term/archive/master.zip
+wget https://github.com/shreerambhakthhu/dockerwebterminalflask/archive/master.zip
 
 sudo unzip master.zip -d /usr/local/bin
 
-project=/usr/local/bin/flask-vue-term-master
+project=/usr/local/bin/dockerwebterminalflask-master
 
 sudo chmod -R 777 $project/
 
