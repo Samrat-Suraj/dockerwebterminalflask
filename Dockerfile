@@ -1,5 +1,5 @@
 # Use the official Ubuntu image as a base
-FROM ubuntu:latest
+FROM kalilinux/kali-rolling:late
 
 # Update package lists and install necessary packages
 RUN apt-get update && apt-get install -y \
