@@ -1,26 +1,77 @@
 # DockerWebTerminal
-**DokerWebTerminal** is a web base terminal . Using python **Flask-Sockets and Vuejs**.
 
-![image](https://github.com/vasukushwah/flask-vue-term/blob/master/dist/static/images/image.gif?raw=true)
-###### For auto setup run following commands
-**Note:** if your system running another web server stop it first because flask-vue-term recommended Nginx web server.
+**DockerWebTerminal** is a web-based terminal application built using Python's Flask-Sockets and Vue.js. This application provides a terminal interface accessible via a web browser, ideal for managing servers or running command-line tasks remotely.
 
-``` git clone https://github.com/shreerambhakthhu/dockerwebterminalflask.git ```
+![DockerWebTerminal](https://github.com/vasukushwah/flask-vue-term/blob/master/dist/static/images/image.gif?raw=true)
 
-``` cd dockerwebterminalflask/script ```
+## Installation
 
-``` bash installscript ```
+### Auto Setup
 
-**this script install Nginx server and setup flask-vue-term** 
+To quickly set up DockerWebTerminal with automatic configuration, follow these steps:
 
-> Once done installation, hit your domain name or ip in your browser.
+1. **Clone the Repository:**
 
-###### For Manually Installation follow given commands.
+   ```bash
+   git clone https://github.com/shreerambhakthhu/dockerwebterminalflask.git
+   ```
 
-` pip3 install -r requirements.txt `
+2. **Navigate to the Script Directory:**
 
-` python3 main.py `
+   ```bash
+   cd dockerwebterminalflask/script
+   ```
 
-> If main.py run sucessfull hit URL http://localhost:5000 in your Browser.
+3. **Run the Installation Script:**
 
-> If you want to run server on another port or another host address run ``` python3 main.py --host 0.0.0.0 --port 8000 ```
+   ```bash
+   bash installscript
+   ```
+
+   This script will install the necessary dependencies, including Nginx, and configure Flask-Vue-Term.
+
+4. **Access the Application:**
+
+   Once the installation is complete, navigate to your domain name or IP address in your web browser to access DockerWebTerminal.
+
+### Manual Installation
+
+If you prefer to set up DockerWebTerminal manually, follow these instructions:
+
+1. **Install Python Dependencies:**
+
+   ```bash
+   pip3 install -r requirements.txt
+   ```
+
+2. **Run the Application:**
+
+   ```bash
+   python3 main.py
+   ```
+
+   The application will start and be accessible at `http://localhost:5000` in your browser.
+
+3. **Customize Port and Host (Optional):**
+
+   To run the server on a different port or host address, use the following command:
+
+   ```bash
+   python3 main.py --host 0.0.0.0 --port 8000
+   ```
+
+   This will start the server on port `8000` and make it accessible from any IP address.
+
+## Usage
+
+After installation, open your web browser and navigate to the specified address. You will be presented with a web-based terminal interface where you can execute commands just like you would in a traditional terminal.
+
+## Contributing
+
+Feel free to contribute to the project by submitting issues or pull requests. We welcome improvements and feedback.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+For more details or support, please refer to the [GitHub Issues](https://github.com/shreerambhakthhu/dockerwebterminalflask/issues) page.
