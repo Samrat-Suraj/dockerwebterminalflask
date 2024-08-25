@@ -74,4 +74,4 @@ Feel free to contribute to the project by submitting issues or pull requests. We
 
 This project is licensed under the [MIT License](LICENSE).
 
-For more details or support, please refer to the [GitHub Issues](https://github.com/shreerambhakthhu/dockerwebterminalflask/issues) page.
+For more details or support, please refer to the [GitHub Issues](https://github.com/samrat-suraj/dockerwebterminalflask/issues) page.
